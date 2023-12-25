@@ -10,15 +10,13 @@ public:
         vector<int> index(2);
 
         for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] < target) {
-                add1 = nums[i];
-                add2 = target - add1;
-                for (int j = i + 1; j < nums.size(); j++) {
-                    if (nums[j] == add2) {
-                        index[0] = i;
-                        index[1] = j;
-                        return index;
-                    }
+            add1 = nums[i];
+            add2 = target - add1;
+            for (int j = i + 1; j < nums.size(); j++) {
+                if (nums[j] == add2) {
+                    index[0] = i;
+                    index[1] = j;
+                    return index;
                 }
             }
         }
