@@ -57,3 +57,6 @@ int main() {
     return 0;
 }
 
+// compile && run 指令
+// g++ add.cpp -o add
+// time ./add
